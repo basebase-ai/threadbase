@@ -7,18 +7,16 @@ import {
 } from "@mantine/core";
 import { theme } from "../theme";
 import { appConfig } from "../config";
+import { FloatingActionButton } from "./components/FloatingActionButton";
 
 export const metadata = {
   title: appConfig.name,
   description: appConfig.description,
-  keywords: appConfig.metadata.keywords,
-  authors: [{ name: appConfig.metadata.author }],
-  creator: appConfig.metadata.author,
-  metadataBase: new URL(appConfig.url),
+  metadataBase: new URL(appConfig.productionUrl),
   openGraph: {
     title: appConfig.name,
     description: appConfig.description,
-    url: appConfig.url,
+    url: appConfig.productionUrl,
     type: "website",
   },
   twitter: {
@@ -42,6 +40,7 @@ export default function RootLayout({ children }: { children: any }) {
       <body>
         <MantineProvider theme={theme} defaultColorScheme="auto">
           {children}
+          <FloatingActionButton />
         </MantineProvider>
       </body>
     </html>

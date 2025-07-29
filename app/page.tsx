@@ -107,7 +107,7 @@ export default function HomePage() {
     setError('');
 
     try {
-      const authResult = await verifyCode(phone.trim(), code.trim(), appConfig.defaultProjectId);
+      const authResult = await verifyCode(phone.trim(), code.trim(), appConfig.projectId);
       console.log('Auth result received:', authResult);
       
       // Manually update auth state since verifyCode() might not trigger onAuthStateChanged immediately
@@ -239,7 +239,7 @@ export default function HomePage() {
                   required
                 />
                 <Text size="xs" c="dimmed" ta="center">
-                  Using project: {appConfig.defaultProjectId}
+                  Using project: {appConfig.projectId}
                 </Text>
                 {error && (
                   <Alert color="red" variant="light">
