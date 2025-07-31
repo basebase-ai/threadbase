@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: any }) {
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <body>
+      <body suppressHydrationWarning={true}>
         <MantineProvider theme={theme} defaultColorScheme="auto">
           {children}
           <FloatingActionButton />
