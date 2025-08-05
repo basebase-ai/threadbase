@@ -1,26 +1,15 @@
-/**
- * Application Configuration
- *
- * Centralized configuration for app metadata, branding, and default settings.
- * Update these values to customize your BaseBase application.
- */
-
+// Auto-generated project configuration
 export const appConfig = {
-  /** Application name displayed throughout the UI */
-  name: "Welcome to Basebase!",
+  projectId: "threadbase",
+  name: "Threadbase",
+  description: "A simple microblogging and conversation platform.",
+  githubUrl: "https://github.com/basebase-ai/threadbase",
+  productionUrl: "https://threadbase.basebase.ai/",
+  categories: ["social"],
+  
+  // Generated metadata
+  generatedAt: "2025-08-05T02:14:28.501Z",
+  version: "1.0.0",
+};
 
-  /** Short description for metadata and about sections */
-  description: "Basebase NextJS starter project.",
-
-  /** Default project ID for authentication (can be overridden by users) */
-  projectId: "test_project",
-
-  /** GitHub URL for the project */
-  githubUrl: "https://github.com/basebase-ai/nextjs-starter",
-
-  /** Production URL for the project */
-  productionUrl: "https://nextjs-starter.basebase.ai",
-} as const;
-
-/** Type-safe access to configuration values */
-export type AppConfig = typeof appConfig;
+export default appConfig;
