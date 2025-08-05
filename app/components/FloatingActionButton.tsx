@@ -44,7 +44,7 @@ export function FloatingActionButton() {
         e.currentTarget.style.boxShadow = '0 4px 16px rgba(34, 139, 230, 0.3)';
       }}
     >
-      ✨ Improve This!
+      ✨ Edit This!
     </button>
   );
 } 
